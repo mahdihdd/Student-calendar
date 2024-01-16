@@ -1,0 +1,229 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to top right, #ffd89b, #19547b);
+  font-family: "Poppins";
+}
+.login-container,
+.sign-up-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login,
+.sign-up {
+  /* height: 400px;
+  width: 350px; */
+  padding: 50px;
+  position: relative;
+  top: -50px;
+  border: 3px solid #ffd89b;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: #ffd89b 0px 19px 38px, #ffd89b 0px 15px 12px;
+  transition: all 1s;
+}
+.username-container,
+.username-register-container {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.default-design {
+  width: 250px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 5px;
+  border: none;
+  outline: 0;
+  cursor: text;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 7px 15px 0px;
+}
+.password-container,
+.password-register-contianer {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.to-sign-up {
+  text-decoration: none;
+}
+.hidden {
+  display: none !important;
+}
+/* sign up section */
+.password-repeat-container {
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.btn-submit,
+.btn-sign-up,
+.btn-submit-curriculm,
+.btn-submit-event {
+  border-radius: 10px;
+  width: 130px;
+  height: 35px;
+  padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 2px solid #ffd89b;
+  cursor: pointer;
+}
+.bact-login {
+  cursor: pointer;
+}
+.event-enter-container {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  /* opacity: 0; */
+}
+
+/* .event-enter-container:hover{
+  opacity: 1;
+  transition: all 1s;
+} */
+.welcome-nav {
+  border-bottom: 2px solid white;
+  padding: 10px 0px 25px 15px;
+}
+.welcome-message {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.date {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  margin-left: 30px;
+}
+.menu {
+  padding: 20px;
+  color: white;
+  border-left: 3px solid white;
+  font-size: 28px;
+  cursor: pointer;
+}
+.menu-bar {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-grow: 1;
+  padding-left: 7px;
+}
+
+.menu:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #3a6887;
+  transition: all 0.4s;
+}
+.an-event-container,
+.curriculm-container,
+.today-schedule-report {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-event,
+.box-curriculm,
+.box-today-schedule {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  border: 3px solid #ffd89b;
+  border-radius: 15px;
+  box-shadow: #ffd89b 0px 19px 38px, #ffd89b 0px 15px 12px;
+}
+#odd,
+#even {
+  cursor: pointer;
+}
+.start-semester {
+  margin-left: 5px;
+}
+.lesson-input {
+  margin-left: 5px;
+}
+.button-conatainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+.container-start-semester {
+  display: flex;
+  flex-direction: column;
+}
+.container-weekylesson {
+  display: flex;
+  flex-direction: column;
+}
+.btn-back-prev,
+.btn-back-prev-event {
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  background-color: white;
+  border: 2px solid #ffd89b;
+  cursor: pointer;
+}
+.title-event {
+  margin-bottom: 20px;
+}
+.lesson-conatainer,
+.time-container {
+  display: flex;
+  flex-direction: row;
+}
+
+/* responsive of the page  */
+@media screen and (max-width: 730px) {
+  .login,
+  .sign-up {
+    padding: 35px;
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .login
+   {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+  .sign-up{
+    padding: 15px 15px;
+    font-size: 12px;
+
+  }
+}
+

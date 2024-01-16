@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>login</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login">
+        <h1 class="login-title">
+          <i class="fa-solid fa-right-to-bracket"></i> login
+        </h1>
+        <div class="username-container">
+          <label for=""><i class="fa-solid fa-user"></i> Username</label>
+          <input class="username default-design" type="text" placeholder="Username" required />
+        </div>
+        <div class="password-container">
+          <label for=""><i class="fa-solid fa-lock"></i> password</label>
+          <input class="password default-design" type="password" placeholder="password" required/>
+        </div>
+        <button class="btn-submit">Login</button>
+        <p>
+          Didn't have an account?<a class="to-sign-up" href=""
+            ><span class="change-to-sing-up"> Sing up</span></a>
+        </p>
+      </div>
+    </div>
+    <div class="sign-up-container hidden">
+      <div class="sign-up">
+        <h1 class="sign-up-title">
+          <i class="fa-solid fa-user-plus"></i> Sign up
+        </h1>
+        <div class="username-register-container">
+          <label for=""><i class="fa-solid fa-user"></i> User name</label>
+          <input class="username-register default-design" type="text" placeholder="Username" required/>
+        </div>
+        <div class="password-register-contianer">
+          <label for=""><i class="fa-solid fa-lock"></i> Password</label>
+          <input type="password" class="password-register default-design" placeholder="Password" required/>
+        </div>
+        <div class="password-repeat-container">
+          <label for=""><i class="fa-solid fa-key"></i> Confirm password</label>
+          <input class="repeat-password default-design" type="password" placeholder="confirm password" required/>
+        </div>
+        <p class="sign-up-message"></p>
+        <button class="btn-sign-up">Sign up</button>
+        <p class="bact-login">Back to login</p>
+      </div>
+    </div>
+    <div class="event-enter-container hidden">
+      <div class="welcome-nav">
+        <h1 class="welcome-message">
+          Welcome to your account
+          <i class="fa-regular fa-handshake" welcome></i>
+        </h1>
+        <div class="date">
+          <i class="fa-regular fa-calendar" calander></i>
+          <p class="current-date"></p>
+        </div>
+      </div>
+      <div class="menu-bar">
+        <p class="first-item menu">Registration of curriculum events</p>
+        <p class="second-item menu">Registration the event on the specified date</p>
+        <p class="today-report menu">Today's work schedule report</p>
+        <p class="menu">Current week's work schedule report</p>
+        <p class="menu">Work schedule report for a specific period</p>
+      </div>
+    </div>
+    <div class="curriculm-container hidden ">
+      <div class="box-curriculm">
+        <div class="container-start-semester">
+        <p class="first-text-item">The start of academic semester :</p>
+        <input class="default-design start-semester" type="date">
+        </div><br>
+         <div class="odd-or-even">
+         <p>Odd or even of the week :</p>
+         <input type="checkbox" id="even" value="even">
+         <label >Even week</label><br>
+         <input type="checkbox" id="odd" value="odd">
+         <label >Odd week</label><br>
+         </div><br>
+         <label for="">The name of the lesson:  </label>
+         <input class="lesson-input default-design" type="text" placeholder="Name"><br>
+         <label for="">The time of the lesson :</label>
+         <input class="default-design time-lesson" type="datetime-local">
+        <div class="button-conatainer">
+          <button class="btn-submit-curriculm">Register</button>
+        </div>
+      </div>
+      <button class="btn-back-prev">Return to the previous page</button>
+    </div>
+    <div class="an-event-container hidden">
+      <div class="box-event">
+        <h2 class="title-event">Registration the event on the specified date</h2>
+        <div class="name-event-conatainer">
+         <label for="">The name of the event:  </label>
+         <input class="event-name default-design" type="text" placeholder="Name"><br>
+        </div>
+        <div class="time-event-container">
+         <label for="">The time of the event:</label>
+         <input class="default-design event-time" type="datetime-local">
+        </div>
+        <div class="button-conatainer">
+          <button class="btn-submit-event">Register</button>
+        </div>
+       </div>
+        <button class="btn-back-prev-event">Return to the previous page</button>
+      </div>
+      </div>
+    </div>
+    <div class="today-schedule-report hidden">
+      <div class="box-today-schedule">
+        <div class="date-container">
+          <h3 class="current-date">today : </h3>
+        </div>
+        <div class="lesson-conatainer">
+          <p class=>name-lesson:</p>
+          <p class="name-lesson">math</p>
+        </div>
+        <div class="time-container">
+          <p>time:</p>
+          <p class="lesson-time">10:23pm</p>
+        </div>
+        
+      </div>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
