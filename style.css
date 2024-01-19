@@ -123,6 +123,10 @@ body {
   align-items: center;
   margin-left: 30px;
 }
+.date2{
+  display: flex;
+  justify-content: center;
+}
 .menu {
   padding: 20px;
   color: white;
@@ -167,6 +171,10 @@ body {
   border-radius: 15px;
   box-shadow: #ffd89b 0px 19px 38px, #ffd89b 0px 15px 12px;
   animation: moveup 1s;
+}
+.box-today-schedule-row{
+  border-bottom: 2px solid #ffd89b;
+  margin-top: 13px;
 }
 #odd,
 #even {
@@ -235,10 +243,11 @@ body {
 }
 
 /* responsive of the page  */
+/* tablet */
 @media screen and (max-width: 730px) {
   .login,
   .sign-up {
-    padding: 35px;
+    padding: 30px;
     font-size: 13px;
   }
   .menu-bar {
@@ -260,7 +269,13 @@ body {
     justify-content: center;
     align-items: center;
   }
+  .welcome-nav{
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
+/* mobile */
 @media screen and (max-width: 400px) {
   .login {
     padding: 8px 15px;
@@ -276,4 +291,28 @@ body {
   .menu {
     font-size: 15px;
   }
+  .default-design{
+    width: 200px;
+  }
 }
+@media screen and (max-width:330px) {
+  .welcome-message{
+    font-size: 18px;
+  }
+  
+}
+@media screen and (max-width: 300px) {
+  .welcome-message{
+    font-size: 15px;
+  }
+  .login {
+    padding: 8px 15px;
+    font-size: 10px;
+  }
+  .sign-up {
+    padding: 15px 15px;
+    font-size: 10px;
+  }
+}
+
+

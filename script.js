@@ -133,5 +133,5 @@ document.querySelector(".btn-back-prev-event").addEventListener("click",function
 document.querySelector('.today-report').addEventListener("click",function() {
   document.querySelector(".event-enter-container").classList.add("hidden");
   document.querySelector('.today-schedule-report').classList.remove("hidden");
-  document.querySelector(".current-date").textContent = `Today : ${date}`
+  document.querySelector(".current-date2").textContent = `Today : ${date}`
 })
