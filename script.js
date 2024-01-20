@@ -15,6 +15,24 @@ let NewUserName,
 var today = new Date();
 var date =
   today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+
+  // var curr = new Date; // get current date
+  // var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
+  // var last = first + 6; // last day is the first day + 6
+  
+  // var firstday = new Date(curr.setDate(first)).toUTCString();
+  // var lastday = new Date(curr.setDate(last)).toUTCString();
+
+//   var curr = new Date;
+// var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
+// var lastday = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
+
+// console.log(firstday,lastday);
+
+// const start = startOfWeek(date, {weekStartsOn: 1});
+// const end = endOfWeek(date, {weekStartsOn: 1});
+// console.log(start,end);
+
 // functions
 // clear the value of the sign up form
 const clearSignUpForm = function () {
@@ -104,7 +122,7 @@ document
       "if you have any lesson, fill out the form";
   });
 // back to previos page
-document.querySelector(".btn-back-prev").addEventListener("click", function () {
+document.querySelector(".prev-event").addEventListener("click", function () {
   document.querySelector(".curriculm-container").classList.add("hidden");
   document.querySelector(".event-enter-container").classList.remove("hidden");
 });
@@ -123,15 +141,20 @@ document
     // clean the input
     document.querySelector(".event-name").value = "";
     document.querySelector(".event-time").value = "";
-});
-document.querySelector(".btn-back-prev-event").addEventListener("click",function(){
+  });
+document.querySelector(".prev-event1").addEventListener("click", function () {
   document.querySelector(".an-event-container").classList.add("hidden");
   document.querySelector(".event-enter-container").classList.remove("hidden");
-
-})
+});
 // today-schedule-report
-document.querySelector('.today-report').addEventListener("click",function() {
+document.querySelector(".today-report").addEventListener("click", function () {
   document.querySelector(".event-enter-container").classList.add("hidden");
-  document.querySelector('.today-schedule-report').classList.remove("hidden");
-  document.querySelector(".current-date2").textContent = `Today : ${date}`
-})
+  document.querySelector(".today-schedule-report").classList.remove("hidden");
+  document.querySelector(".current-date2").textContent = `Today : ${date}`;
+});
+
+// back from the section 3 to event container
+document.querySelector(".prev-event2").addEventListener("click", function () {
+  document.querySelector(".event-enter-container").classList.remove("hidden");
+  document.querySelector(".today-schedule-report").classList.add("hidden");
+});
