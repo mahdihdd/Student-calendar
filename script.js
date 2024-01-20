@@ -15,24 +15,13 @@ let NewUserName,
 var today = new Date();
 var date =
   today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate();
+// calculate the current week
+var curr = new Date(); // get current date
+var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
+var last = first + 6; // last day is the first day + 6
 
-  // var curr = new Date; // get current date
-  // var first = curr.getDate() - curr.getDay(); // First day is the day of the month - the day of the week
-  // var last = first + 6; // last day is the first day + 6
-  
-  // var firstday = new Date(curr.setDate(first)).toUTCString();
-  // var lastday = new Date(curr.setDate(last)).toUTCString();
-
-//   var curr = new Date;
-// var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
-// var lastday = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
-
-// console.log(firstday,lastday);
-
-// const start = startOfWeek(date, {weekStartsOn: 1});
-// const end = endOfWeek(date, {weekStartsOn: 1});
-// console.log(start,end);
-
+var firstday = new Date(curr.setDate(first)).toUTCString().slice(5, 16);
+var lastday = new Date(curr.setDate(last)).toUTCString().slice(5, 16);
 // functions
 // clear the value of the sign up form
 const clearSignUpForm = function () {
@@ -158,3 +147,22 @@ document.querySelector(".prev-event2").addEventListener("click", function () {
   document.querySelector(".event-enter-container").classList.remove("hidden");
   document.querySelector(".today-schedule-report").classList.add("hidden");
 });
+// week report
+document.querySelector(".week-report").addEventListener("click", function () {
+  document.querySelector(".event-enter-container").classList.add("hidden");
+  document
+    .querySelector(".current-week-schedule-report")
+    .classList.remove("hidden");
+  document.querySelector(
+    ".date-current-week"
+  ).textContent = `The report from ${firstday} until ${lastday}`;
+});
+// back to prev page of current week shedule
+document.querySelector(".prev-event3").addEventListener("click",function() {
+  document.querySelector(".event-enter-container").classList.remove("hidden");
+  document.querySelector(".current-week-schedule-report").classList.add("hidden");
+
+  document
+
+  
+})

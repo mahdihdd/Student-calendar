@@ -136,6 +136,10 @@ body {
 .date2{
   display: flex;
   justify-content: center;
+  margin-bottom: 8px;
+}
+.current-date2{
+  color: #ffeed2;
 }
 .menu {
   padding: 20px;
@@ -160,7 +164,8 @@ body {
 }
 .an-event-container,
 .curriculm-container,
-.today-schedule-report {
+.today-schedule-report,
+.current-week-schedule-report {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -175,19 +180,21 @@ body {
 }
 .box-event,
 .box-curriculm,
-.box-today-schedule {
+.box-today-schedule,
+.box-week-shedule {
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 20px 50px;
+  padding: 5px 50px;
   border: 3px solid #ffd89b;
   border-radius: 15px;
   box-shadow: #ffd89b 0px 19px 38px, #ffd89b 0px 15px 12px;
   animation: moveup 1s;
 }
-.box-today-schedule-row{
+.box-today-schedule-row,
+.bow-week-shedule-row{
   border-bottom: 2px solid #ffd89b;
-  margin-top: 13px;
+  margin-top: 2px;
 }
 #odd,
 #even {
@@ -229,9 +236,18 @@ body {
   margin-bottom: 20px;
 }
 .lesson-conatainer,
-.time-container {
+.time-container,
+.lesson-conatainer-week,
+.time-container-week {
   display: flex;
   flex-direction: row;
+}
+.current-week{
+  margin-bottom: 8px;
+}
+.date-current-week{
+  color: #ffeed2;
+
 }
 /* ! animation*/
 @keyframes moveup {

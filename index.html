@@ -70,7 +70,7 @@
         <p class="first-item menu">Registration of curriculum events</p>
         <p class="second-item menu">Registration event on the specified date</p>
         <p class="today-report menu">Today's work schedule report</p>
-        <p class="menu">Current week's work schedule report</p>
+        <p class="week-report menu">Current week's work schedule report</p>
         <p class="menu">Work schedule report for a specific period</p>
       </div>
     </div>
@@ -117,11 +117,12 @@
       </div>
     </div>
     <div class="today-schedule-report hidden">
+      <div class="date2">
+        <!-- <i class="fa-regular fa-calendar" calander></i> -->
+        <h2 class="current-date2"></h2>
+      </div>
       <div class="box-today-schedule">
-        <div class="date2">
-          <!-- <i class="fa-regular fa-calendar" calander></i> -->
-          <h2 class="current-date2"></h2>
-        </div>
+        
         <div class="box-today-schedule-row">
           
             <div class="lesson-conatainer">
@@ -146,6 +147,24 @@
         </div>
       </div>
       <button class="btn-back prev-event2">Return to the previous page</button>
+    </div>
+    <div class="current-week-schedule-report hidden">
+      <div class="current-week">
+        <h3 class="date-current-week"></h3>
+      </div>
+      <div class="box-week-shedule">
+        <div class="bow-week-shedule-row">
+          <div class="lesson-conatainer-week">
+            <p class=>name-lesson:</p>
+            <p class="name-lesson-week">math</p>
+          </div>
+          <div class="time-container-week">
+           <p>time:</p>
+           <p class="lesson-time">10:23pm</p>
+          </div>
+        </div>
+      </div>
+      <button class="btn-back prev-event3">Return to the previous page</button>
     </div>
     <script src="script.js" type="text/javascript"></script>
   </body>
