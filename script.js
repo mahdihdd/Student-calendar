@@ -160,9 +160,11 @@ document.querySelector(".week-report").addEventListener("click", function () {
 // back to prev page of current week shedule
 document.querySelector(".prev-event3").addEventListener("click",function() {
   document.querySelector(".event-enter-container").classList.remove("hidden");
-  document.querySelector(".current-week-schedule-report").classList.add("hidden");
-
-  document
-
+  document.querySelector(".current-week-schedule-report").classList.add("hidden");  
+})
+// open the  schedule-specific-period 
+document.querySelector(".specific-time").addEventListener("click" , function () {
+  document.querySelector(".event-enter-container").classList.add("hidden");
+  document.querySelector(".schedule-specific-period").classList.remove("hidden")
   
 })

@@ -165,7 +165,8 @@ body {
 .an-event-container,
 .curriculm-container,
 .today-schedule-report,
-.current-week-schedule-report {
+.current-week-schedule-report,
+.schedule-specific-period {
   width: 100vw;
   height: 100vh;
   display: flex;
