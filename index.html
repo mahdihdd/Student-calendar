@@ -167,10 +167,51 @@
       <button class="btn-back prev-event3">Return to the previous page</button>
     </div>
     <div class="schedule-specific-period hidden">
+      <div class="period-date">
+        <h3 class="period-text"></h3>
+      </div>
       <div class="box-specific period">
-        <input class="default-design time-lesson" type="datetime-local">
+        <div class="box-start-date">
+         <p class="input-date-period">Please enter a start date</p>
+         <input class="default-design start-date time-lesson" type="date">
+        </div>
+        <div class="box-last-date">
+          <p class="input-date-period">Please enter the end date</p>
+          <input class="default-design end-date" type="date">
+        </div>
+        <button class="btn-confrim">Confrim</button>
+      </div>
+      <button class="btn-back prev-event4">Return to the previous page</button>
+      <div class="box-period-schedule hidden">
+        <div class="box-period-schedule-row">
+          
+            <div class="lesson-conatainer-period">
+              <p class=>name-lesson:</p>
+              <p class="name-lesson-period">math</p>
+            </div>
+            <div class="time-container-period">
+             <p>time:</p>
+             <p class="lesson-time-period">10:23pm</p>
+            </div>
+
+        </div>
+        <div class="box-period-schedule-row">
+          
+          <div class="lesson-conatainer-period">
+            <p class=>name-lesson:</p>
+            <p class="name-lesson-period">math</p>
+          </div>
+          <div class="time-container-period">
+           <p>time:</p>
+           <p class="lesson-time-period">10:23pm</p>
+          </div>
 
       </div>
+
+      </div>
+      <button class="back-period hidden">back</button>
+      
+
 
     </div>
     <script src="script.js" type="text/javascript"></script>

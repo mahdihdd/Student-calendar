@@ -80,7 +80,9 @@ body {
 .btn-submit,
 .btn-sign-up,
 .btn-submit-curriculm,
-.btn-submit-event {
+.btn-submit-event,
+.btn-confrim,
+.back-period {
   border-radius: 10px;
   width: 130px;
   height: 35px;
@@ -91,6 +93,17 @@ body {
   border: 2px solid #ffe1b2;
   cursor: pointer;
 }
+.back-period{
+  margin-top: 35px;
+}
+.btn-confrim:hover{
+  background-color: #fff8ed;
+  transform: scale(1.1);
+
+}
+/* .btn-confrim:active{
+  animation: disappear 2s;
+} */
 .btn-submit:hover{
   background-color: #fff8ed;
   transform: scale(1.12);
@@ -166,7 +179,7 @@ body {
 .curriculm-container,
 .today-schedule-report,
 .current-week-schedule-report,
-.schedule-specific-period {
+.schedule-specific-period{
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -182,18 +195,34 @@ body {
 .box-event,
 .box-curriculm,
 .box-today-schedule,
-.box-week-shedule {
+.box-week-shedule,
+.box-period-schedule{
   background-color: white;
   display: flex;
   flex-direction: column;
-  padding: 5px 50px;
+  padding: 8px 50px;
   border: 3px solid #ffd89b;
   border-radius: 15px;
   box-shadow: #ffd89b 0px 19px 38px, #ffd89b 0px 15px 12px;
   animation: moveup 1s;
 }
+.box-specific{
+  padding: 20px 20px;
+  gap: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ffd89b;
+  border-radius: 15px;
+  box-shadow: #ffd89b 0px 19px 38px, #ffd89b 0px 15px 12px;
+  animation: moveup 1s;
+  top: 12px;
+}
 .box-today-schedule-row,
-.bow-week-shedule-row{
+.bow-week-shedule-row,
+.box-period-schedule-row{
   border-bottom: 2px solid #ffd89b;
   margin-top: 2px;
 }
@@ -236,10 +265,19 @@ body {
 .title-event {
   margin-bottom: 20px;
 }
+.period-text{
+  color: #ffeed2;
+
+}
+.period-date{
+  margin-bottom: 10px;
+}
 .lesson-conatainer,
 .time-container,
 .lesson-conatainer-week,
-.time-container-week {
+.time-container-week,
+.lesson-conatainer-period,
+.time-container-period {
   display: flex;
   flex-direction: row;
 }
@@ -271,6 +309,15 @@ body {
     opacity: 1;
     transform: translateY(0);
 
+  }
+  
+}
+@keyframes disappear {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
   }
   
 }

@@ -10,7 +10,9 @@ let NewUserName,
   lessonName,
   lessonTime,
   eventName,
-  eventTime;
+  eventTime,
+  startDate,
+  endDate;
 // make current time
 var today = new Date();
 var date =
@@ -158,13 +160,47 @@ document.querySelector(".week-report").addEventListener("click", function () {
   ).textContent = `The report from ${firstday} until ${lastday}`;
 });
 // back to prev page of current week shedule
-document.querySelector(".prev-event3").addEventListener("click",function() {
+document.querySelector(".prev-event3").addEventListener("click", function () {
   document.querySelector(".event-enter-container").classList.remove("hidden");
-  document.querySelector(".current-week-schedule-report").classList.add("hidden");  
-})
-// open the  schedule-specific-period 
-document.querySelector(".specific-time").addEventListener("click" , function () {
+  document
+    .querySelector(".current-week-schedule-report")
+    .classList.add("hidden");
+});
+// open the  schedule-specific-period
+document.querySelector(".specific-time").addEventListener("click", function () {
   document.querySelector(".event-enter-container").classList.add("hidden");
-  document.querySelector(".schedule-specific-period").classList.remove("hidden")
-  
+  document
+    .querySelector(".schedule-specific-period")
+    .classList.remove("hidden");
+});
+// last part
+// getting value of start date and end date for display the period of event
+document.querySelector(".btn-confrim").addEventListener("click", function () {
+  let startChange, endChange;
+  document.querySelector(".back-period").classList.remove("hidden");
+  document.querySelector(".prev-event4").classList.add("hidden");
+  document.querySelector(".box-specific").classList.add("hidden");
+  document.querySelector(".box-period-schedule").classList.remove("hidden");
+
+  startDate = document.querySelector(".start-date").value;
+  endDate = document.querySelector(".end-date").value;
+  startChange = startDate.toString().slice(5, 16);
+  endChange = endDate.toString().slice(5, 16);
+  console.log(startDate, endDate);
+  document.querySelector(
+    ".period-text"
+  ).textContent = `The events from ${startDate} until ${endDate} `;
+});
+// return back
+document.querySelector(".prev-event4").addEventListener("click", function () {
+  document.querySelector(".event-enter-container").classList.remove("hidden");
+  document.querySelector(".schedule-specific-period").add.classList("hidden");
+});
+// back
+document.querySelector(".back-period").addEventListener("click",function(){
+  document.querySelector(".prev-event4").classList.remove("hidden")
+  document.querySelector(".back-period").classList.add("hidden");
+  document.querySelector(".box-specific").classList.remove("hidden");
+  document.querySelector(".box-period-schedule").classList.add("hidden")
+
 })
