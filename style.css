@@ -93,26 +93,24 @@ body {
   border: 2px solid #ffe1b2;
   cursor: pointer;
 }
-.back-period{
+.back-period {
   margin-top: 35px;
 }
-.btn-confrim:hover{
+.btn-confrim:hover {
   background-color: #fff8ed;
   transform: scale(1.1);
-
 }
 /* .btn-confrim:active{
   animation: disappear 2s;
 } */
-.btn-submit:hover{
+.btn-submit:hover {
   background-color: #fff8ed;
   transform: scale(1.12);
 }
-.btn-sign-up:hover{
+.btn-sign-up:hover {
   background-color: #fff8ed;
   transform: scale(1.12);
 }
-
 
 .bact-login {
   cursor: pointer;
@@ -146,12 +144,12 @@ body {
   align-items: center;
   margin-left: 30px;
 }
-.date2{
+.date2 {
   display: flex;
   justify-content: center;
   margin-bottom: 8px;
 }
-.current-date2{
+.current-date2 {
   color: #ffeed2;
 }
 .menu {
@@ -179,7 +177,7 @@ body {
 .curriculm-container,
 .today-schedule-report,
 .current-week-schedule-report,
-.schedule-specific-period{
+.schedule-specific-period {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -188,7 +186,7 @@ body {
   align-items: center;
   animation: appear 1.5s;
 }
-.regiser:hover{
+.regiser:hover {
   background-color: #fff8ed;
   transform: scale(1.03);
 }
@@ -196,7 +194,7 @@ body {
 .box-curriculm,
 .box-today-schedule,
 .box-week-shedule,
-.box-period-schedule{
+.box-period-schedule {
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -206,7 +204,7 @@ body {
   box-shadow: #ffd89b 0px 19px 38px, #ffd89b 0px 15px 12px;
   animation: moveup 1s;
 }
-.box-specific{
+.box-specific {
   padding: 20px 20px;
   gap: 20px;
   background-color: white;
@@ -222,9 +220,12 @@ body {
 }
 .box-today-schedule-row,
 .bow-week-shedule-row,
-.box-period-schedule-row{
+.box-period-schedule-row {
   border-bottom: 2px solid #ffd89b;
   margin-top: 2px;
+}
+.name-event-container,.time-event-container{
+  display: inline;
 }
 #odd,
 #even {
@@ -249,7 +250,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.btn-back{
+.btn-back {
   border-radius: 10px;
   padding: 10px;
   margin-top: 25px;
@@ -258,18 +259,17 @@ body {
   border: 2px solid #ffd89b;
   cursor: pointer;
 }
-.btn-back:hover{
+.btn-back:hover {
   background-color: #fff8ed;
   transform: scale(1.01);
 }
 .title-event {
   margin-bottom: 20px;
 }
-.period-text{
+.period-text {
   color: #ffeed2;
-
 }
-.period-date{
+.period-date {
   margin-bottom: 10px;
 }
 .lesson-conatainer,
@@ -281,12 +281,11 @@ body {
   display: flex;
   flex-direction: row;
 }
-.current-week{
+.current-week {
   margin-bottom: 8px;
 }
-.date-current-week{
+.date-current-week {
   color: #ffeed2;
-
 }
 /* ! animation*/
 @keyframes moveup {
@@ -300,35 +299,40 @@ body {
   }
 }
 @keyframes appear {
-  0%{
+  0% {
     opacity: 0;
     transform: translateY(20px);
-
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
-
   }
-  
 }
 @keyframes disappear {
-  0%{
+  0% {
     opacity: 1;
   }
-  100%{
+  100% {
     opacity: 0;
   }
-  
 }
 
 /* responsive of the page  */
 /* tablet */
 @media screen and (max-width: 730px) {
   .login,
-  .sign-up {
+  .sign-up
+   {
     padding: 30px;
     font-size: 13px;
+  }
+  .box-event{
+    padding: 5px 12px;
+    font-size: 14px;
+  }
+  .box-curriculm {
+    font-size: 14px;
+    padding: 20px;
   }
   .menu-bar {
     display: flex;
@@ -349,13 +353,40 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .welcome-nav{
+  .welcome-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 520px){
+  .box-event{
+    font-size: 12px;
+  }
+
+}
+@media screen and (max-width: 540px){
+  .box-event{
+    font-size: 12px;
+  }
+  
+
+}
+/* mobile */
+@media screen and (max-width: 440px){
+  .box-event{
+    padding: 5px 8px;  
+  }
+  .name-event-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .time-event-conatainer{
     display: flex;
     flex-direction: column;
   }
   
+
 }
-/* mobile */
 @media screen and (max-width: 400px) {
   .login {
     padding: 8px 15px;
@@ -371,18 +402,17 @@ body {
   .menu {
     font-size: 15px;
   }
-  .default-design{
+  .default-design {
     width: 200px;
   }
 }
-@media screen and (max-width:330px) {
-  .welcome-message{
+@media screen and (max-width: 330px) {
+  .welcome-message {
     font-size: 18px;
   }
-  
 }
 @media screen and (max-width: 300px) {
-  .welcome-message{
+  .welcome-message {
     font-size: 15px;
   }
   .login {
@@ -393,6 +423,7 @@ body {
     padding: 15px 15px;
     font-size: 10px;
   }
+  .menu-bar {
+    gap: 1px;
+  }
 }
-
-
